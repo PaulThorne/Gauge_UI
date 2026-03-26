@@ -1,0 +1,41 @@
+<component>
+	<api />
+	<styles>
+		<style name="indicator_style" line_width="1" arc_color="0x0000ff" />
+		<style name="majorTick" line_color="0x0000ff" line_width="5" text_color="0x0000ff" length="10" />
+		<style name="minorTick" line_color="0x0000ff" line_width="2" />
+
+		<style name="indicator_style_hot" arc_color="0xff0000" text_color="0xff0000" arc_width="4" />
+		<style name="majorTick_hot" text_color="0xff0000" line_color="0xff0000" line_width="5" />
+		<style name="minorTick_hot" line_color="0xff0000" line_width="2" />
+	</styles>
+
+	<view align="center" width="100%" height="100%">
+		<lv_scale
+			text_src="custom_labels"
+			align="center"
+			mode="round_outer"
+			total_tick_count="21"
+			major_tick_every="5"
+			label_show="true"
+			min_value="0"
+			max_value="100"
+		>
+			<lv_scale-section
+				style_items="minorTick"
+				style_main="indicator_style"
+				style_indicator="majorTick"
+				min_value="0"
+				max_value="74"
+			/>
+			<lv_scale-section
+				style_items="minorTick_hot"
+				style_main="indicator_style_hot"
+				style_indicator="majorTick_hot"
+				min_value="75"
+				max_value="100"
+			/>
+		</lv_scale>
+		<lv_label text="hello world" />
+	</view>
+</component>
